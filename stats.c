@@ -1,38 +1,42 @@
 /******************************************************************************
- * Copyright (C) 2017 by Alex Fosdick - University of Colorado
+ * Copyright (C) 2021 by Kollepara Bharadwaj
  *
  * Redistribution, modification or use of this software in source or binary
  * forms is permitted as long as the files maintain this copyright. Users are 
  * permitted to modify this and use it to learn about the field of embedded
- * software. Alex Fosdick and the University of Colorado are not liable for any
- * misuse of this material. 
+ * software. Kollepara Bharadwaj is not liable for any misuse of this material. 
  *
  *****************************************************************************/
 /**
  * @file stats.c 
+ *
  * @brief This file contains logic/algorithm to calculate the MAXIMUM, MINIMUM,
  * MEDIAN and MENA for the provided set of data in from of an array.
- *
+ * 
  * This file also ocontains fuction's for swaping the data as well as function
  * for sorting the data in Decending order
  *
  * @author Kollepara Bharadwaj
- * @date 13 May 2021
+ * @date 15 May 2021
  *
  */
 
 
-
+/********Include*************/
 #include <stdio.h>
 #include <math.h>
 #include "stats.h"
 
 
-/* Size of the Data Set */
-#define SIZE (40)
+/********Defines************/
+#define SIZE (40)	//Size of the data set
+
+
+/********Start of Main***********/
 
 void main() {
 
+//Provided data set
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
