@@ -1,115 +1,137 @@
 /******************************************************************************
- * Copyright (C) 2017 by Alex Fosdick - University of Colorado
+ * Copyright (C) 2021 Kollepara Bharadwaj
  *
  * Redistribution, modification or use of this software in source or binary
  * forms is permitted as long as the files maintain this copyright. Users are 
  * permitted to modify this and use it to learn about the field of embedded
- * software. Alex Fosdick and the University of Colorado are not liable for any
- * misuse of this material. 
+ * software. Kollepara Bharadwaj is not liable for any misuse of this material. 
  *
  *****************************************************************************/
 /**
  * @file stats.h
  * @brief header file for stats
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ *This file contains the function function declerations
+ * 
+ * @author Kollepara Bharadwaj 
+ * @date 15 May 20201
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief print_statistics(unsigned char *array, unsigned int array_size) 
  *
- * <Add Extended Description Here>
+ * This function prints the Maximum value, Minimum value, Mean, Median for the
+ * provided data in form of a array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param *array 	pointer to array
+ * @param  array_size 	Size of the array passed to the function
+ * 
+ * @return returns void
  */
 void print_statistics(unsigned char *array, unsigned int array_size);
 
+
+
+
+
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief rint_array(unsigned char *array, int array_size)
  *
- * <Add Extended Description Here>
+ * This function prints the data contained in the array as per the size parameter
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @array *array	Pointer to the array
+ * @param  array_size	Size of the array
+ * 
+ * @return returns void
  */
 void print_array(unsigned char *array, int array_size);
 
+
+
+
+
+
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief find_median(unsigned char *array, int array_size)
  *
- * <Add Extended Description Here>
+ * This function finds the median for the given set of data by sorting 
+ * them in descending order, then check the size of the array for odd or even. 
+ * If odd, it simply retuns the data present in the middle of the array
+ * If even, then it applies the formula and returns the median. 
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param *array	Pointer to array
+ * @param array_size	Size of the array
+ * 
+ * @return retuns median as float data type
  */
 float find_median(unsigned char *array, int array_size);
 
+
+
+
+
+
+
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief find_maximum(unsigned char *array, int array_size)
  *
- * <Add Extended Description Here>
+ * This function find the maximum value in the given data set 
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param *array	Pointer to array
+ * @param array_size	Size of the array
+ * 
+ * @return returns the maximum value
  */
 unsigned char find_maximum(unsigned char *array, int array_size);
 
+
+
+
+
+
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief find_minimum(unsigned char *array, int array_size)
  *
- * <Add Extended Description Here>
+ * This function find the maximum value in the given data set 
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param *array	Pointer to array
+ * @param array_size	Size of the array
+ * 
+ * @return returns the maximum value
  */
 unsigned char find_minimun(unsigned char *array, int array_size);
 
+
+
+
+
+
+
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief find_mean(unsigned char *array, int array_size)
  *
- * <Add Extended Description Here>
+ * This function finds the mean of the value
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param *array	Pointer to array
+ * @param array_size	size of the array
+ * 
+ * @return returns the mean value as double data type
  */
 double find_mean(unsigned char *array, int array_size);
 
+
+
+
+
+
+
 /**
- * @brief Function to sort array in Descending order
+ * @brief sort_array(insigned char *arary, int array_size)
  *
  *
  * @param array     -  arrady that needs to be sorted 
@@ -120,13 +142,19 @@ double find_mean(unsigned char *array, int array_size);
  */
 void sort_array(unsigned char *array, int array_size);
 
+
+
+
+
+
+
 /**
  * @brief Function to swap data
  *
  *
  * @param &a and &b are the data that needs to be swaped
 
- * @return <void
+ * @return void
  */
 void swap (unsigned char *a, unsigned char *b);
 
